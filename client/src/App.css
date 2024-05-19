@@ -1,0 +1,355 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+.uploaded-logo {
+  margin-top: 10px;
+  width: 100px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  color: #333;
+}
+
+input {
+  width: calc(100% - 16px); /* Adjusting input width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.delete-button,
+.add-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button {
+  color: #fff;
+}
+
+.add-button:hover {
+  background-color: #388e3c;
+}
+.save-continue {
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+}
+
+.totals-container {
+  margin-top: 20px;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+}
+.qr-code {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.totals-container table {
+  flex: 2;
+}
+
+.totals-container th {
+  text-align: center;
+}
+
+.totals-container td {
+  font-weight: bold;
+  text-align: center;
+}
+.input-field {
+  margin-bottom: 10px;
+}
+.input-label {
+  margin-bottom: 5px;
+  display: block;
+}
+.template-dropdown {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.template-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  padding: 10px 40px 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .add-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .image-section {
+    display: none;
+  }
+  .totals-container {
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
+  .text-section h1 {
+    font-size: 30px !important;
+  }
+  .header .logo a {
+    font-size: 20px;
+  }
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.create-invoice-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-invoice-btn:hover {
+  background-color: #0056b3;
+}
+
+.invoice-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.invoice-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.invoice-info {
+  flex: 1;
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.upi {
+  font-weight: bold;
+}
+.invoice-row:hover {
+  background-color: #dbdbdc;
+  cursor: pointer;
+  position: relative;
+}
+.invoice-row:hover .inv-del {
+  display: block;
+}
+.inv-del {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 4px;
+}
+
+.header-content {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0px 10px 33px rgb(0 0 0 / 11%);
+  height: 77vh;
+}
+.text-section {
+  flex: 1;
+  text-align: center;
+}
+.text-section h1 {
+  font-size: 40px;
+}
+.image-section {
+  flex: 2;
+}
+img.b-img {
+  width: 100%;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fffefe;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 11%);
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .logo a {
+  color: rgb(0 123 255);
+  text-decoration: none;
+}
+
+.header .user-info {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .username {
+  margin-right: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header .dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.header .dropdown button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.header .dropdown button:hover {
+  text-decoration: underline;
+}
+.auth_container {
+  margin-top: 170px;
+}
