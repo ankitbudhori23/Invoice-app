@@ -15,13 +15,16 @@ function Login() {
   const onFinish = async (values) => {
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:3005/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        "https://invoice-app-steel-seven.vercel.app/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Login failed: ${response.statusText}`);

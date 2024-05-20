@@ -20,7 +20,7 @@ function InvoiceView() {
 
   const handleTemplateChange = (event) => {
     setSelectedTemplate(event.target.value);
-    fetch(`http://localhost:3005/api/invoice/${id}`, {
+    fetch(`https://invoice-app-steel-seven.vercel.app/api/invoice/${id}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

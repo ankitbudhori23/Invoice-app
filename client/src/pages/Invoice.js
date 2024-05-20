@@ -198,13 +198,16 @@ function Invoice() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3005/api/invoice", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://invoice-app-steel-seven.vercel.app/api/invoice",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       if (response.status === 201) {
         const { id } = await response.json();
         navigate("/invoice-preview", { state: { formData, id } });

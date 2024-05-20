@@ -8,20 +8,20 @@ function HomePage() {
   const navigate = useNavigate();
   const { id } = JSON.parse(localStorage.getItem("user"));
   useEffect(() => {
-    fetch(`http://localhost:3005/api/invoice/findAll/${id}`).then(
-      (response) => {
-        response.json().then((data) => {
-          setData(data);
-        });
-      }
-    );
+    fetch(
+      `https://invoice-app-steel-seven.vercel.app/api/invoice/findAll/${id}`
+    ).then((response) => {
+      response.json().then((data) => {
+        setData(data);
+      });
+    });
   }, []);
   const handleClick = (item) => {
     navigate("/invoice-preview", { state: { formData: item, id: item._id } });
   };
   const deleteInvoice = (e, item) => {
     e.stopPropagation();
-    fetch(`http://localhost:3005/api/invoice/${item}`, {
+    fetch(`https://invoice-app-steel-seven.vercel.app/api/invoice/${item}`, {
       method: "DELETE",
     }).then((response) => {
       if (response.status === 200) {

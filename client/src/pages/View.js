@@ -8,7 +8,7 @@ function InvoiceView() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/api/invoice/${id}`)
+    fetch(`https://invoice-app-steel-seven.vercel.app/api/invoice/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.data);
